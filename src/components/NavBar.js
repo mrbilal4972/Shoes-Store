@@ -45,11 +45,6 @@ function NavBar() {
             Home
             </Typography>
             </Link>
-            <Link to='/products' className={classes.links} color="inherit">
-            <Typography variant="subtitle2" color="inherit">
-            Products
-            </Typography>
-            </Link>
         </Toolbar>
       </AppBar>
     </div>

@@ -8,13 +8,14 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 1
+      flexGrow: 1,
+      // border: '1px solid black'
     },
     paper: {
       padding: theme.spacing(2),
       margin: '1rem auto',
       maxWidth: 500,
-      backgroundImage: 'linear-gradient(to right, #9e9e9e, #f5f5f5)'
+      backgroundImage: 'linear-gradient(to right, #cfd8dc, #eceff1)'
     },
     image: {
       width: 128,
@@ -41,7 +42,7 @@ function ItemCard({item}) {
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src={item.image} />
+              <img className={classes.img} alt="complex" src={item.image[0]} />
             </ButtonBase>
           </Grid>
           <Grid item xs={12} sm container>
