@@ -9,6 +9,7 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      // display: 'inline-block'
       // border: '1px solid black'
     },
     paper: {
@@ -37,6 +38,7 @@ function ItemCard({item}) {
 
   return (
     <>
+    {/* <Grid item xs = {5}> */}
       <div key={item.id} className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
@@ -66,6 +68,7 @@ function ItemCard({item}) {
         </Grid>
       </Paper>
     </div>
+      {/* </Grid> */}
     </>
   )
 }
