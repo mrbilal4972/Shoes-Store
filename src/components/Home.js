@@ -6,7 +6,6 @@ import {
 import NewArrivalLink from './NewArrivalLink';
 import  WomencollectionLink from './WomenCollectionLink';
 import MenCollectionLink from './MenCollectionLink';
-import HomeHeader from './HomeHeader';
 import SaleAlert from './SaleAlert';
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 // import {Link} from 'react-router-dom';
