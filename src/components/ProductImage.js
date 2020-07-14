@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 800,
     flexGrow: 1,
-    // boxShadow: '0.5rem 0.5rem #eeeeee'
   },
   header: {
     display: 'flex',
@@ -40,14 +39,12 @@ const useStyles = makeStyles((theme) => ({
 function ProductImage({type}) {
 
   const shoes = useContext(productContext);
-//   console.log(shoes)
   let selectedShoe;
   shoes.forEach((i) => {
       if(type === i.type){
         selectedShoe =  i;
         }
   });
-//   console.log(selectedShoe);
 
   const classes = useStyles();
   const theme = useTheme();

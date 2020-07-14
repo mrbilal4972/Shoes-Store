@@ -9,14 +9,17 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      // display: 'inline-block'
-      // border: '1px solid black'
+
     },
     paper: {
       padding: theme.spacing(2),
       margin: '1rem auto',
-      maxWidth: 500,
-      backgroundImage: 'linear-gradient(to right, #cfd8dc, #eceff1)'
+      width: '100%',
+      backgroundColor: 'gray',
+      color: 'white',
+      '&:hover': {
+        opacity: 0.9,
+      }
     },
     image: {
       width: 128,
@@ -38,8 +41,7 @@ function ItemCard({item}) {
 
   return (
     <>
-    {/* <Grid item xs = {5}> */}
-      <div key={item.id} className={classes.root}>
+      <Grid key={item.id} className={classes.root} item xs={10}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
           <Grid item>
@@ -50,25 +52,24 @@ function ItemCard({item}) {
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
+                <Typography gutterBottom variant="h6">
                   {item.Brand}
                 </Typography>
-                <Typography variant="body2" gutterBottom>
+                <Typography variant="subtitle2" gutterBottom>
                   {item.type}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="caption" color="inherit">
                   ID: {item.id}
                 </Typography>
               </Grid>
             </Grid>
             <Grid item>
-              <Typography variant="subtitle1">Rs {item.prize}</Typography>
+              <Typography variant="h5">Rs {item.prize}</Typography>
             </Grid>
           </Grid>
         </Grid>
       </Paper>
-    </div>
-      {/* </Grid> */}
+    </Grid>
     </>
   )
 }

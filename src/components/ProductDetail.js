@@ -11,17 +11,17 @@ import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '3rem'
+    padding: '1rem 0.5rem',
+    minHeight: '100vh',
+    // backgroundColor: 'yellow'
+    },
+    item: {
+      backgroundColor: 'yellow',
     },
   marginGrid: {
-      margin: '0.5rem',
+      margin: '0.3rem',
     },
 }));
-
-// function handleClick(event) {
-//   event.preventDefault();
-//   console.info('You clicked a breadcrumb.');
-// }
 
 function ProductDetail() {
 
@@ -41,6 +41,7 @@ function ProductDetail() {
     >
 
 <Grid
+      item
       container
       direction="row"
       justify="center"
@@ -65,19 +66,18 @@ function ProductDetail() {
 
 
   <Grid
+      item
       container
       direction="row"
       justify="center"
       alignItems="center"
       className={classes.root}
     >
-      <Grid item lg= {7} className={classes.marginGrid}>
+      <Grid item lg= {8} className={classes.marginGrid}>
         <ProductImage type={productType}/>
       </Grid>
       <Grid item lg= {3} className={classes.marginGrid}>
         <ProductInfo type={productType}/>
-      </Grid>
-      <Grid item lg= {2}>
       </Grid>
 
 

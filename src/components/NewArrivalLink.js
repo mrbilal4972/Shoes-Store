@@ -10,8 +10,10 @@ const useStyles = makeStyles((theme) => ({
     gridItems: {
       margin: '0.5rem',
       flexWrap: 'wrap',
-      textAlign: 'center'
-    },
+      textAlign: 'center',
+    }
+    
+    ,
     paperItem: {
       width: '100%',
       height: theme.spacing(20),
@@ -20,7 +22,10 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
       justifyContent: "center",
       backgroundColor: 'gray',
-      color: 'white'
+      color: 'white',
+      '&:hover': {
+        opacity: 0.9,
+      }
     },
     internalGrid: {
       height: '100%',

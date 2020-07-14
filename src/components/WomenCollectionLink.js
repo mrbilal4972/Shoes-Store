@@ -21,7 +21,10 @@ import {Link} from 'react-router-dom';
       flexDirection: "column",
       justifyContent: "center",
       backgroundColor: 'gray',
-      color: 'white'
+      color: 'white',
+      '&:hover': {
+        opacity: 0.9,
+      }
     },
     internalGrid: {
       height: '100%',

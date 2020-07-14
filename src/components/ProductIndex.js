@@ -1,18 +1,18 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {productContext} from '../App';
-// import {shoes} from './dummyData'
 import ItemCard from './ItemCard';
-// import classes from '*.module.css';
 import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100%',
-    backgroundImage: 'linear-gradient(to right, #e0e1e5 , #f7f6f4, #e0e1e5, #f7f6f4)',
-    padding: '1rem'
-    
-    }
+    minHeight: '100%',
+    padding: '1rem',
+    },
+  link: {
+    textDecoration: 'none'
+  }
 }));
 
 
@@ -23,15 +23,17 @@ function ProductIndex() {
 
   return (
     <>
-    <div className={classes.root}>
+    <Grid container direction='row' className={classes.root}>
     {
       shoes.map((item) => (
-          <Link key={item.type} to={item.type}>
+        <Grid key={item.type} item lg={4} xs={10}>
+          <Link to={item.type} className={classes.link}>
             <ItemCard item = {item}/>
           </Link>
+          </Grid>
       ))
     }
-      </div>
+      </Grid>
     </>
   )
 }
