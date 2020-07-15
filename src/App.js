@@ -5,7 +5,8 @@ import Products from './components/Products';
 import NavBar from './components/NavBar';
 import ProductDetail from './components/ProductDetail';
 import ProductIndex from './components/ProductIndex';
-import Footer from './Footer'
+import Footer from './Footer';
+import NotFound from './components/NotFound';
 import {shoes} from './components/dummyData';
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<ProductIndex />}></Route>
           <Route path=':productType' element={<ProductDetail />}></Route>
         </Route>
+        <Route path={'*'} element={<NotFound />}></Route>
       </Routes>
       </productContext.Provider>
       <Footer />
